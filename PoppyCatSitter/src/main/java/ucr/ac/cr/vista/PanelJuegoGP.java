@@ -1,0 +1,348 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ucr.ac.cr.vista;
+
+import ucr.ac.cr.controlador.ControladorG;
+
+/**
+ *
+ * @author Mónica Artavia
+ */
+public class PanelJuegoGP extends javax.swing.JPanel {
+
+    private ControladorG controlador;
+    /**
+     * Creates new form PanelJuegoGP
+     */
+    public PanelJuegoGP() {
+        initComponents();
+    }
+
+    public void deshabilitarResultado(boolean estado){
+        btnComprar.setVisible(estado);
+        btnSalud.setVisible(estado);
+        btnVolver.setVisible(estado);
+        btnSalud2.setVisible(estado);
+        btnNivel.setVisible(estado);
+        btnSiguiente.setVisible(estado);
+        btnMedicina.setVisible(estado);
+        btnPastilla.setVisible(estado);
+    }
+    
+    public void deshabilitarDormir(boolean estado){
+        btnComprar.setEnabled(estado);
+        btnSalud.setEnabled(estado);
+        btnVolver.setEnabled(estado);
+        btnSalud2.setEnabled(estado);
+    }
+    
+    public void lizzyMostrar(boolean estado){
+        lblLizzy.setVisible(estado);
+    }
+    
+    public void iniciandoNuevo(){
+        ocultarComienzo();
+        ocultoComienzo();
+        mostrarDia();
+        medicamentoEnable(false);
+        pastillaEnable(false);
+    }
+
+    public void mostrarNivel(String titulo){
+        nivel.setText(titulo);
+    }
+    
+    public void mostrarSalud(String titulo){
+        salud.setText(titulo);
+    }
+
+    public void mostrarMedicamento(String titulo){
+        medicina.setText(titulo);
+    }
+    
+    public void mostrarPastilla(String titulo){
+        pastilla.setText(titulo);
+    }
+    
+    public void medicamentoEnable(boolean estado){
+        btnMedicina.setEnabled(estado);
+    }
+    
+    public void pastillaEnable(boolean estado){
+        btnPastilla.setEnabled(estado);
+    }
+    
+    public void escuchar(ControladorG controlador){
+        btnComprar.addActionListener(controlador);
+        btnNivel.addActionListener(controlador);
+        btnSalud.addActionListener(controlador);
+        btnSiguiente.addActionListener(controlador);
+        btnVolver.addActionListener(controlador);
+        btnComenzar.addActionListener(controlador);
+        btnSalud2.addActionListener(controlador);
+        btnMedicina.addActionListener(controlador);
+        btnPastilla.addActionListener(controlador);
+    }
+    
+    public void mostrarDia(){
+        fondoOn.setVisible(true);
+        fondoOff.setVisible(false);
+        amarillo.setVisible(true);
+    }
+    
+    public void mostrarNoche(){
+        fondoOn.setVisible(false);
+        fondoOff.setVisible(true);
+        amarillo.setVisible(false);
+    }
+    
+    public void ocultarComienzo(){
+        salud.setVisible(false);
+        nivel.setVisible(false);
+        medicina.setVisible(false);
+        pastilla.setVisible(false);
+    }
+    
+    public void mostrarComienzo(){
+        salud.setVisible(true);
+        nivel.setVisible(true);
+        medicina.setVisible(false);
+        pastilla.setVisible(false);
+    }
+    
+    public void ocultoComienzo(){
+        btnComprar.setVisible(false);
+        btnNivel.setVisible(false);
+        btnSalud.setVisible(false);
+        btnSiguiente.setVisible(false);
+        btnVolver.setVisible(false);
+        btnMedicina.setVisible(false);
+        btnPastilla.setVisible(false);
+        btnSalud2.setVisible(false);
+        btnComenzar.setVisible(true);
+    }
+    
+    public void visibleComienzo(){
+        btnComprar.setVisible(true);
+        btnNivel.setVisible(true);
+        btnSalud.setVisible(true);
+        btnSiguiente.setVisible(true);
+        btnVolver.setVisible(true);
+        btnMedicina.setVisible(false);
+        btnPastilla.setVisible(false);
+        btnSalud2.setVisible(false);
+        btnComenzar.setVisible(false);
+    }
+    
+    public void limpio(boolean estado){
+        amarillo.setVisible(estado);
+    }
+    
+    public void suciedad1(boolean estado){
+        amarilloSucio1.setVisible(estado);
+    }
+    
+    public void suciedad2(boolean estado){
+        amarilloSucio2.setVisible(estado);
+    }
+    
+    public void suciedad3(boolean estado){
+        amarilloSucio3.setVisible(estado);
+    }
+    
+    public void suciedad4(boolean estado){
+        amarilloSucio4.setVisible(estado);
+    }
+    
+    public void mostrarMedicina(boolean estado){
+        btnMedicina.setVisible(estado);
+        medicina.setVisible(estado);
+        btnPastilla.setVisible(estado);
+        pastilla.setVisible(estado);
+    }
+    
+    public void mostrarSaludBotones(boolean estado){
+        btnSalud.setVisible(estado);
+        btnSalud2.setVisible(!estado);
+    }
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        salud = new javax.swing.JLabel();
+        btnSalud2 = new javax.swing.JButton();
+        btnSalud = new javax.swing.JButton();
+        btnComenzar = new javax.swing.JButton();
+        pastilla = new javax.swing.JLabel();
+        btnPastilla = new javax.swing.JButton();
+        medicina = new javax.swing.JLabel();
+        btnMedicina = new javax.swing.JButton();
+        nivel = new javax.swing.JLabel();
+        btnSiguiente = new javax.swing.JButton();
+        btnComprar = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
+        btnNivel = new javax.swing.JButton();
+        amarilloSucio4 = new javax.swing.JLabel();
+        amarilloSucio3 = new javax.swing.JLabel();
+        amarilloSucio2 = new javax.swing.JLabel();
+        amarilloSucio1 = new javax.swing.JLabel();
+        amarillo = new javax.swing.JLabel();
+        lblLizzy = new javax.swing.JLabel();
+        fondoOn = new javax.swing.JLabel();
+        fondoOff = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        salud.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
+        salud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        salud.setText("0");
+        add(salud, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 1030, 80, 20));
+
+        btnSalud2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SALUD A.png"))); // NOI18N
+        btnSalud2.setActionCommand("Salud2");
+        btnSalud2.setBorderPainted(false);
+        btnSalud2.setContentAreaFilled(false);
+        btnSalud2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SALUD A.png"))); // NOI18N
+        btnSalud2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SAA.png"))); // NOI18N
+        add(btnSalud2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 950, -1, -1));
+
+        btnSalud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SALUD A.png"))); // NOI18N
+        btnSalud.setActionCommand("Salud");
+        btnSalud.setBorderPainted(false);
+        btnSalud.setContentAreaFilled(false);
+        btnSalud.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SALUD A.png"))); // NOI18N
+        btnSalud.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SAA.png"))); // NOI18N
+        add(btnSalud, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 950, -1, -1));
+
+        btnComenzar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/COMENZAR A.png"))); // NOI18N
+        btnComenzar.setActionCommand("Comenzar");
+        btnComenzar.setBorderPainted(false);
+        btnComenzar.setContentAreaFilled(false);
+        btnComenzar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/COMENZAR A.png"))); // NOI18N
+        btnComenzar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/AC.png"))); // NOI18N
+        add(btnComenzar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 740, 170, 70));
+
+        pastilla.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        pastilla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pastilla.setText("0");
+        add(pastilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 900, 60, -1));
+
+        btnPastilla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/PASTILLA A.png"))); // NOI18N
+        btnPastilla.setActionCommand("Pastilla");
+        btnPastilla.setBorderPainted(false);
+        btnPastilla.setContentAreaFilled(false);
+        btnPastilla.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/img/PSA.png"))); // NOI18N
+        btnPastilla.setEnabled(false);
+        add(btnPastilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 910, 60, -1));
+
+        medicina.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        medicina.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        medicina.setText("0");
+        add(medicina, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 900, 80, -1));
+
+        btnMedicina.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MEDICINA A.png"))); // NOI18N
+        btnMedicina.setActionCommand("Medicina");
+        btnMedicina.setBorderPainted(false);
+        btnMedicina.setContentAreaFilled(false);
+        btnMedicina.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MCA.png"))); // NOI18N
+        btnMedicina.setEnabled(false);
+        btnMedicina.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MEDICINA A.png"))); // NOI18N
+        btnMedicina.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MCA.png"))); // NOI18N
+        add(btnMedicina, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 910, 60, -1));
+
+        nivel.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
+        nivel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nivel.setText("0");
+        add(nivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, 60, -1));
+
+        btnSiguiente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SIGUIENTE A.png"))); // NOI18N
+        btnSiguiente.setActionCommand("Siguiente");
+        btnSiguiente.setBorderPainted(false);
+        btnSiguiente.setContentAreaFilled(false);
+        btnSiguiente.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SIGUIENTE A.png"))); // NOI18N
+        btnSiguiente.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/SP.png"))); // NOI18N
+        add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 30, 80, 70));
+
+        btnComprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/COMPRAR A.png"))); // NOI18N
+        btnComprar.setActionCommand("Comprar");
+        btnComprar.setBorderPainted(false);
+        btnComprar.setContentAreaFilled(false);
+        btnComprar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/COMPRAR A.png"))); // NOI18N
+        btnComprar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CAP.png"))); // NOI18N
+        add(btnComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 950, -1, -1));
+
+        btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/VOLVER A.png"))); // NOI18N
+        btnVolver.setActionCommand("Volver");
+        btnVolver.setBorderPainted(false);
+        btnVolver.setContentAreaFilled(false);
+        btnVolver.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/VOLVER A.png"))); // NOI18N
+        btnVolver.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/VAP.png"))); // NOI18N
+        add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 950, -1, -1));
+
+        btnNivel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/NIVEL A.png"))); // NOI18N
+        btnNivel.setActionCommand("Nivel 1");
+        btnNivel.setBorderPainted(false);
+        btnNivel.setContentAreaFilled(false);
+        btnNivel.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/NIVEL A.png"))); // NOI18N
+        btnNivel.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/NVA.png"))); // NOI18N
+        add(btnNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, 80, -1));
+
+        amarilloSucio4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Gris normal mancha 4.png"))); // NOI18N
+        add(amarilloSucio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, -1, -1));
+
+        amarilloSucio3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Gris normal mancha 3.png"))); // NOI18N
+        add(amarilloSucio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, -1, -1));
+
+        amarilloSucio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Gris normal mancha 2.png"))); // NOI18N
+        add(amarilloSucio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, -1, -1));
+
+        amarilloSucio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Gris normal mancha 1.png"))); // NOI18N
+        add(amarilloSucio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, -1, -1));
+
+        amarillo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Gris normal.png"))); // NOI18N
+        add(amarillo, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, -1, -1));
+
+        lblLizzy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Lizzy normal.png"))); // NOI18N
+        add(lblLizzy, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 187, 240, 600));
+
+        fondoOn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1 on.png"))); // NOI18N
+        add(fondoOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        fondoOff.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fondoOff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1 off.png"))); // NOI18N
+        add(fondoOff, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+    }// </editor-fold>//GEN-END:initComponents
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel amarillo;
+    private javax.swing.JLabel amarilloSucio1;
+    private javax.swing.JLabel amarilloSucio2;
+    private javax.swing.JLabel amarilloSucio3;
+    private javax.swing.JLabel amarilloSucio4;
+    private javax.swing.JButton btnComenzar;
+    private javax.swing.JButton btnComprar;
+    private javax.swing.JButton btnMedicina;
+    private javax.swing.JButton btnNivel;
+    private javax.swing.JButton btnPastilla;
+    private javax.swing.JButton btnSalud;
+    private javax.swing.JButton btnSalud2;
+    private javax.swing.JButton btnSiguiente;
+    private javax.swing.JButton btnVolver;
+    private javax.swing.JLabel fondoOff;
+    private javax.swing.JLabel fondoOn;
+    private javax.swing.JLabel lblLizzy;
+    private javax.swing.JLabel medicina;
+    private javax.swing.JLabel nivel;
+    private javax.swing.JLabel pastilla;
+    private javax.swing.JLabel salud;
+    // End of variables declaration//GEN-END:variables
+}
